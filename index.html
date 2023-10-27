@@ -1,17 +1,15 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBE9FJ888P"></script>
+<!--     <script async src="https://www.googletagmanager.com/gtag/js?id=G-SBE9FJ888P"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
         gtag('config', 'G-SBE9FJ888P');
-    </script>
+    </script> -->
 
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -181,6 +179,11 @@
             pointer-events: none; /* Disable pointer events to prevent interactions */
         }
 
+
+        .gumroad .cart-button {
+            display: none !important;
+        }
+
     </style>
     <meta name="description"
         content="Mockupea is a free app for creating a 3d book or magazine mockup in your browser. You can use it to present your new ebook or magazine.">
@@ -197,6 +200,7 @@
 
 <body>
   
+  <script src="https://gumroad.com/js/gumroad.js"></script>
     <p id="meta" hidden>Mockupea is an app for creating a 3d book or magazine mockup in your browser. You
         can use it to present your new ebook or magazine.
     </p>
@@ -236,15 +240,15 @@
 
     <div class="uk-inline">
         <button class="info" type="button"><span  uk-icon="icon: info"></span>Info</button>
-        <div uk-dropdown="mode: click" class="uk-border-rounded">
+        <div uk-dropdown="mode: click" class="uk-border-rounded uk-width-medium">
             <ul class="uk-nav uk-dropdown-nav">
                 <li class="uk-nav-header uk-text-capitalize">Copyright &#169; 2023 Mockupea. All rights reserved.</li>
                 <li><a href="#modal-privacy" uk-toggle>Privacy Policy.</a></li>
                 <li><a href="#modal-terms" uk-toggle >Terms and conditions</a></li>
                 <li class="uk-nav-divider"></li>
-                <li><p>Info: <a href="https://info.mockupea.com" target="_blank">info.mockupea.com</a></p></li>
                 <li><p>Contact: mockupea@gmail.com</p></li>
             </ul>
+            <a href="https://nikola203.gumroad.com/l/jvvio"  class="primary-buy">Get desktop version</a>
         </div>
     </div>
 
@@ -541,10 +545,8 @@
             <p id="peti" class hidden>The resolution depends on the viewport size. It will be displayed below the export button.
             </p>
             <br>
-            <a class="faq-question" href="#" uk-toggle="target: #sesti; animation: uk-animation-fade">Why is
-                exporting mockups sometimes slowing down the app?</a>
-            <p id="sesti" class hidden>At the moment, the way Mockupea exports mockups is by expanding the canvas to
-                hight resolution and that can sometimes slow down the app.</p>
+            <a class="faq-question" href="#" uk-toggle="target: #sesti; animation: uk-animation-fade">Can I download Mockupea and use it offline?</a>
+            <p id="sesti" class hidden><a href="https://nikola203.gumroad.com/l/jvvio" class="primary-buy">Get desktop version</a></p>
             <br>
             <a class="faq-question" href="#" uk-toggle="target: #sedmi; animation: uk-animation-fade">What is Tone
                 Mapping?</a>
@@ -620,8 +622,8 @@
                                     class="uk-margin-small-right"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-down"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"/><path fill="#35435F" d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17zm-3.91-7L12 14.82 16 10z"/></g></g></svg></span>Select</button>
                             <div uk-dropdown="mode: click; offset: 1">
                                 <ul class="uk-nav uk-navbar-dropdown-nav size">
-                                    <li><a href="#" id="HardcoverBook">Hardcover</a></li>
-                                    <li><a href="#" id="paperbackBook">Paperback</a></li>
+                                    <li><a onClick="removehash()" href="#" id="HardcoverBook">Hardcover</a></li>
+                                    <li><a onClick="removehash()" href="#" id="paperbackBook">Paperback</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -802,10 +804,10 @@
                                         type="button"><span class="uk-margin-small-right"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><g data-name="Layer 2"><g data-name="arrow-down"><rect width="24" height="24" transform="rotate(-90 12 12)" opacity="0"/><path fill="#35435F" d="M12 17a1.72 1.72 0 0 1-1.33-.64l-4.21-5.1a2.1 2.1 0 0 1-.26-2.21A1.76 1.76 0 0 1 7.79 8h8.42a1.76 1.76 0 0 1 1.59 1.05 2.1 2.1 0 0 1-.26 2.21l-4.21 5.1A1.72 1.72 0 0 1 12 17zm-3.91-7L12 14.82 16 10z"/></g></g></svg></span>Select</button>
                                     <div uk-dropdown="mode: click; offset: 1">
                                         <ul class="uk-nav uk-navbar-dropdown-nav tonem">
-                                            <li><a href="#" id="no">None</a></li>
-                                            <li><a href="#" id="linear">Linear</a></li>
-                                            <li><a href="#" id="cineon">Cineon</a></li>
-                                            <li><a href="#" id="aces">ACES</a></li>
+                                            <li><a onClick="removehash()" href="#" id="no">None</a></li>
+                                            <li><a onClick="removehash()" href="#" id="linear">Linear</a></li>
+                                            <li><a onClick="removehash()" href="#" id="cineon">Cineon</a></li>
+                                            <li><a onClick="removehash()" href="#" id="aces">ACES</a></li>
                                         </ul>
                                     </div>
                                 </div>
