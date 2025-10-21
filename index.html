@@ -31,6 +31,14 @@
             overflow: hidden;
         }
 
+      ms-store-badge {
+      	padding: 0;
+        bottom:2rem;
+        right: 2rem;
+        position: absolute;
+      	height: 1.5rem;
+      }
+
         .container2 {
             display: flex;
             align-items: center;
@@ -242,6 +250,16 @@
         <div id="canvas" class="threeCanvas">
         </div>
     </div>
+
+    <ms-store-badge
+        productid="9nbbk325cmmk"
+        window-mode="full"
+        theme="auto"
+        size="small"
+        language="en-us"
+        animation="on">
+    </ms-store-badge>
+
 
     <div class="uk-container-large uk-position-medium uk-position-bottom-right uk-box-shadow-small uk-animation-fade hidden"
         id="consent-popup">
@@ -1005,6 +1023,7 @@
         </div>
     </div>
 
+    <script type="module" src="https://get.microsoft.com/badge/ms-store-badge.bundled.js"></script>
     <script>
         function removehash() {
             setTimeout(function () {
